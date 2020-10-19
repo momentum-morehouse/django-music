@@ -14,7 +14,7 @@ Your Django app should allow you to do the following:
 - Edit an existing album
 - Delete an existing album
 
-Your app should have at least minimal styling using a CSS library like Tachyons or Bootstrap.
+Your app should have at least minimal styling using a CSS library like Tachyons, Material, or Semantic.
 
 A good place to start is planning out your model and making sure you can make an Album object in the console. Make some simple wireframes to sketch out the different functions of the app on the list above, and the urls (and corresponding view functions) you will need to make each page show up. Start with the home page.
 
@@ -30,11 +30,18 @@ A good place to start is planning out your model and making sure you can make an
 In your project directory, run the following to install the project dependencies, set up your virtual environment, and run the existing database migrations. After you do these steps you can run your server.
 
 ```
-> poetry install
-> cp django_music/.env.sample django_music/.env
-> poetry shell
-> ./manage.py migrate
+$ pipenv install
+$ cp django_music/.env.sample django_music/.env
+$ pipenv shell
+$ python manage.py migrate
 ```
+Alternative:
+```
+$ pip install -r requirements.txt
+```
+
+This app uses [Django Registration Redux](https://django-registration-redux.readthedocs.io/en/latest/quickstart.html?highlight=urls) to provide a process for users to register. You will see it added to settings and urls. Redux requires a template called `base.html`. To register for the first time, a user vists `accounts/register`, to login visit `accounts/login` and to logout visit `accounts/logout`.
+
 
 To generate an app in your django_music project (so that you have something analogous to `contacts` in the Uptact assignment), you want to run the following (where <name_of_app> is a name you can choose) in your repo:
 
@@ -88,5 +95,5 @@ This project was generated from the Momentum Django project template. This templ
 - There is a custom user model defined in `users.models.User`.
 - There is a `templates/` and a `static/` directory at the top level, both of which are set up to be used.
 - A `.gitignore` file is provided.
-- [Poetry](https://python-poetry.org/) is used to manage dependencies.
+- [Pipenv](https://pypi.org/project/pipenv/) is used to manage dependencies.
 
