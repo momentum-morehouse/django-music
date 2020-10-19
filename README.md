@@ -86,6 +86,10 @@ If you ran `django-admin startapp albums`, your directory structure would look l
 
 Once you have your app set up, be sure to add it to the `INSTALLED_APPS` list in `settings.py`.
 
+### Turning it in
+
+We are going to use a new way of turning this in. DO your work in a branch and then create a pull request with your work.
+
 ### Django Project Template
 
 This project was generated from the Momentum Django project template. This template sets up some minimal changes:
